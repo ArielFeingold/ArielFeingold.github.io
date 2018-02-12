@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "How did I get into coding and why"
-date:       2018-02-12 14:01:13 +0000
+date:       2018-02-12 09:01:14 -0500
 permalink:  how_did_i_get_into_coding_and_why
 ---
 
@@ -14,23 +14,22 @@ I grew up in Tel Aviv and began working in our family catering business.  Once I
 
 You may ask yourself what I found so exiting about coding. Well, there are a few aspects of it that makes it the best fit for me:
 
-**Coding is ever changing **
+**Coding is ever changing**
 
-Technology is always changing and with it the tools used to create it. Being a developer means that you are always learning new skills and new programing languages you will never feel stagnated. 
+Technology is always changing and with it the tools used to create it. Being a developer means that you are always learning new skills and new programing languages so you will never feel stagnated. 
 
 **Coding is creative**
 
 I see the role of developer as that of an artist. Like a painter that uses the canvas, brush and color to create something new, a developer creates something new using the computer as canvas and code as the tool to bring to life websites, apps and platforms. The possibilities are endless and only limited by your imagination.
 
- **Coding is the present and the future**
- 
-Ever since the invention of the PC, and even more since the smartphone revolution, technology has been an integral part of modern life. We use all day, everyday. Being able to code allows you the opportunity to touch people’s lives and hopefully make it better. As we progress towards an ever more tech-filled future, developer skills are increasingly in demand. We could even see programming languages become more valuable than traditional spoken languages.
+**Coding is the present and the future**
 
-**Coding is to be a part of a community**
+Ever since the invention of the PC, and even more since the smartphone revolution, technology has been an integral part of modern life. We use it all day, everyday. Being able to code affords you the opportunity to touch people’s lives and hopefully make them better. As we progress towards an ever more tech-filled future, developer skills will increasingly be in demand. We could even see programming languages become more valuable than traditional spoken languages.
 
-The people you work with are just as important as the work. Web developers will not only probably work in a team, they have countless online communities at their fingertips. The online community for developers is huge, and if used to the full can be a source of technical support and a place with like-minded people. Online communities are a great resource that you can gain a lot from, not to mention what you can give back.
+**Coding is being part of a community**
 
-**Coding gives you freedom and flexibility **
+The people you work with are just as important as the work you do. Web developers not only usually work in a team, but they also have countless online communities at their fingertips. The online community for developers is huge, and if used to the fullest can be a source of technical support and a meeting place with like-minded people. Online communities are a great resource that you can gain a lot from, not to mention what you can give back.
+
+**Coding gives you freedom and flexibility** 
 
 Learning code is learning a high demand trade that can be done from anywhere- all you need is a computer and internet access. You can be your own boss or work in a company. You can work from home, an office or even the coffee shop down the block. 
-
