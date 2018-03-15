@@ -6,9 +6,9 @@ permalink:  my_first_project
 ---
 
 
-I have been learning code fo almost two months now and boy was it a whirlwind. Learning code is very much like learning a new language. You learn how to speak to your computer and tell it what to do. If something gets lost in translation then it will not understand you and won’t cooperate…
+I have been learning code for almost two months now and boy was it a whirlwind. Learning code is very much like learning a new language- you learn how to speak to your computer and tell it what to do. If something gets lost in translation then it will not understand you and won’t cooperate…
 
-during these weeks I have been learning the words and how to make sentences and now it was time to take it to the next level and write an assay, or in this case- my very first program. This was very exciting to me, the thing that draw me to programming  the most was how it allows you to create new things and this would be my first opportunity to do so.
+during these weeks I have been learning the words and how to make sentences (aka code) and now it was time to take it to the next level and write an assay, or in this case- my very first program. This was very exciting to me, the thing that draw me to programming  the most was how it allows you to create new things and this would be my first opportunity to do so.
 
 The assignment was to build an app that provides a Command Line Interface (CLI) to an external data source.
  I decided to create a “Headphone Buyer’s Guide” to help the user find the best headphone for him. You can check it out here:
