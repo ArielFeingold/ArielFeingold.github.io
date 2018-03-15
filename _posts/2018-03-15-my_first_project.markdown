@@ -1,12 +1,12 @@
 ---
 layout: post
 title:      "My First Project"
-date:       2018-03-15 19:00:44 +0000
+date:       2018-03-15 15:00:45 -0400
 permalink:  my_first_project
 ---
 
 
-I have been learning code fo almost two months now and boy was it a whirlwind. Learning code is very much like learning a new language,. You learn how to speak to your computer and tell it what to do. If something gets lost in translation then it will not understand you and won’t cooperate…
+I have been learning code fo almost two months now and boy was it a whirlwind. Learning code is very much like learning a new language. You learn how to speak to your computer and tell it what to do. If something gets lost in translation then it will not understand you and won’t cooperate…
 
 during these weeks I have been learning the words and how to make sentences and now it was time to take it to the next level and write an assay, or in this case- my very first program. This was very exciting to me, the thing that draw me to programming  the most was how it allows you to create new things and this would be my first opportunity to do so.
 
