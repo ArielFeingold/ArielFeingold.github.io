@@ -14,7 +14,6 @@ The assignment was to build an app that provides a Command Line Interface (CLI) 
  I decided to create a “Headphone Buyer’s Guide” to help the user find the best headphone for him. You can check it out here:
 
 - [GitHub repo](https://github.com/ArielFeingold/headphones-buyers-guide-cli-gem)
-- Walkthrough video
 
 This project can be intimidating at first. The possibilities are endless, how to decide what to do and how to go about it?
 In my opinion the most important thing is to have a solid work process to help you stayed focused and achieve your goals. Here is mine, I hope it helps other new programers like me.
