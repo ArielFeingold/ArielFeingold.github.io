@@ -71,6 +71,7 @@ class Counter extends Component {
      )
    }
 }
+```
 
 Changing the state can be done after by using react's setState function:
 
