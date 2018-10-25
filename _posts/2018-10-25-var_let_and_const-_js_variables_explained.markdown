@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Var, Let and Const- JS variables explained"
-date:       2018-10-25 13:52:31 +0000
+date:       2018-10-25 09:52:32 -0400
 permalink:  var_let_and_const-_js_variables_explained
 ---
 
@@ -90,7 +90,7 @@ As you can see the variable is declared at the top and initialized with a value 
 Due to the lax nature of `var` and the hoisting mechanism there is a greater chance of variable assignments and reassignments errors. That is a whole subject by itself, but it is important to keep a good practice of doing all variable assignment at the top of the scope and use the strict mode.
 
 
-# LET & CONST# 
+# LET & CONST
 Now that we went through the behavior of Var and the possible pitfalls and gottchas. Lets turn our attention to Let & Const and how they combat those quirks and shortcomings.
 
 **Scope**
