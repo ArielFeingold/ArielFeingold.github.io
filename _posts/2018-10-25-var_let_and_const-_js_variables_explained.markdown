@@ -1,11 +1,11 @@
 ---
 layout: post
-title:      "Var, Let and Const- JS variables explained"
+title:      "Var, Let and Const- "
 date:       2018-10-25 09:52:32 -0400
 permalink:  var_let_and_const-_js_variables_explained
 ---
 
-
+# JS variables explained
 In the beginning Var ruled as king in the Java Script world. But not all was good in the JS kingdom and declaring variables using Var caused issues and weaknesses that needed to be address. Fast forward to the arrival of ES2015 and the introduction of two new variable declarations- Let and Const, coming to save the day.
 
 But what makes them different? When and where should we use them? This article will discuss each of the declarations with regards to their scope, hoisting and use. 
