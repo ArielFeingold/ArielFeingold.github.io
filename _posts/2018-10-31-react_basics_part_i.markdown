@@ -1,15 +1,12 @@
 ---
 layout: post
 title:      "React Basics part I"
-date:       2018-10-31 19:03:26 +0000
+date:       2018-10-31 15:03:27 -0400
 permalink:  react_basics_part_i
 ---
 
 
-# What Is React 
-
-React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”.
-Developed by Facebook in 2011 and open-sourced in 2015, it has one of the largest communities supporting it.
+React is a declarative, efficient, and flexible JavaScript library for building user interfaces. It lets you compose complex UIs from small and isolated pieces of code called “components”. Developed by Facebook in 2011 and open-sourced in 2015, it has one of the largest communities supporting it.
 
 It is important to understand that React is not a language. At the base of it it's JavaScript functions and classes that are usually written using a syntax extension called JSX (more on that to come). React is also not a complete MVC architecture pattern as it is only handling the V part of the MVC (Model, View, Controller). 
 
