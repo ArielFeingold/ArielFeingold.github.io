@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "React Hooks"
-date:       2018-11-11 15:16:33 +0000
+title:      "React useState Hook"
+date:       2018-11-11 10:16:33 -0500
 permalink:  react_hooks
 ---
 
@@ -84,6 +84,21 @@ function counter() {
 
 export default counter;
 ```
+
+the first thing you notice is that the code is much shorter and simple to read. We don’t need to create an event handler, no need to use setState and no need for a constructor.
+
+useState lets you use mutable state within a component without the need for it to be a class component. This method requires only one argument- the initial state (in our case 0). Unlike with classes, the state doesn’t have to be an object. We can also keep a number or a string if that’s all we need.
+
+`setState `returns a pair of values: 
+
+1.	The current state
+2.	A function that updates the state
+
+That is why we write `const [ count, setCount ]`. They are equivalent to `“this.state.count”` & `this.setState ({ count: })`
+
+Now we have an initial value set in a state object provided by React and a way to update that state and all that without the need to use a JS class.
+
+
 
 
 
