@@ -1,22 +1,22 @@
 ---
 layout: post
 title:      "Passing props to React Router's Link component"
-date:       2019-01-06 18:30:42 +0000
+date:       2019-01-06 13:30:42 -0500
 permalink:  passing_props_to_react_routers_link_component
 ---
 
 
-Often times when building an app with React Router you’ll need to pass props through a Link component to the new route. In this post, we’ll break down how that process works.
+Often times when building an app with React Router you’ll need to pass props through a Link component to the new route. In this post, I’ll break down how that process works.
 
 There are two different ways to pass data from a Link component through to the new route that’s being rendered. The first is through URL Parameters and the second is through state.
 
-First, let’s take a look at URL parameters. If you’ve read our URL Parameters post, you’ll be familiar with this example. Say we were in charge of building out the Route that renders Twitter’s profile page. If created with React Router, that route may look like this
+First, let’s take a look at URL parameters. Say we were in charge of building out the Route that renders Twitter’s profile page. If created with React Router, that route may look like this
 
 ```
 <Route path='/:handle' component={Profile} />
 ```
 
-Notice that handle is going to be dynamic. It could be anything from tylermcginnis or dan_abramov to realDonaldTrump.
+Notice that handle is going to be dynamic. It could be anything from tylermcginnis or scottWolf to realDonaldTrump.
 
 So in our app we may have a Link component that looks like this
 
