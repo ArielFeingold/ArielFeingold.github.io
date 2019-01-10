@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "How to Pass props to React Router's Link component"
-date:       2019-01-10 19:08:02 +0000
+title:      "How to Pass props to Router's Link component"
+date:       2019-01-10 14:08:02 -0500
 permalink:  how_to_pass_props_to_react_routers_link_component
 ---
 
