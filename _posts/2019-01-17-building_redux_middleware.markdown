@@ -6,9 +6,99 @@ permalink:  building_redux_middleware
 ---
 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sagittis risus lacus, quis dapibus magna luctus non. Mauris sit amet congue arcu. Mauris nec fermentum erat. Pellentesque nec semper tortor. Phasellus convallis lorem sit amet lacus mattis, id rhoncus dolor mollis. Ut fermentum nibh at metus faucibus tristique. Aliquam erat volutpat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur urna justo, porta quis ex tincidunt, rhoncus malesuada odio. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Cras in tincidunt massa, sit amet tempor tortor. Suspendisse congue blandit sapien quis cursus. Vestibulum venenatis, nisl sit amet tincidunt imperdiet, justo libero pretium turpis, nec feugiat erat ligula eu lacus. Maecenas mattis, lectus in luctus maximus, augue risus hendrerit nisi, sit amet tristique nisi augue sit amet nisl.
-Integer porta semper arcu vitae condimentum. Fusce eget euismod felis. Nunc ut lobortis magna. Cras et mi quis nulla imperdiet fringilla. Aenean vehicula lorem eget ligula consequat, quis venenatis dui maximus. Morbi sit amet tristique erat, sed vulputate enim. Suspendisse a leo non sem placerat ullamcorper.
-Integer consequat faucibus nunc. Vivamus in rhoncus ligula. In eu sapien non metus vehicula laoreet interdum vitae est. Aenean ut dictum libero. Pellentesque vehicula mattis eros, sed gravida nunc sodales et. Nullam in augue et mauris iaculis iaculis. Duis odio justo, tincidunt id accumsan malesuada, rutrum id elit. Aenean pretium dictum vehicula. Ut consequat est et fringilla convallis. Curabitur porttitor ligula ac felis sollicitudin semper. Aenean id eleifend neque. Pellentesque pellentesque tempus lacus, volutpat fermentum nisl pretium at. Sed vitae mi at magna porttitor dignissim.
-Aenean vehicula lectus sed nisi condimentum, ut blandit metus sodales. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur a rhoncus turpis. Sed sagittis molestie erat, non hendrerit quam aliquam vel. Suspendisse nec felis ex. Sed id velit id leo tincidunt consequat vitae vitae eros. Aenean nibh nulla, molestie sit amet eleifend ac, cursus non tortor. Quisque id risus eget ante pulvinar sodales. Phasellus fermentum massa lacus, a aliquam urna tincidunt quis. Nulla aliquam at ipsum vel iaculis. Sed ut mattis enim, nec pharetra nibh. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut at ultrices arcu.
-Curabitur suscipit nibh est, nec sagittis sapien interdum in. Nulla vitae mi at metus pharetra rhoncus. Curabitur vestibulum vehicula accumsan. In elementum dignissim mollis. Donec sit amet faucibus urna, non elementum magna. Morbi cursus, enim non iaculis semper, lorem lorem condimentum eros, vitae efficitur nisi mi nec libero. Aenean ac ipsum pulvinar massa vestibulum auctor et nec nibh.
+**Basic middleware**
+```
+const customMiddleware = store => next => action => {
+  if(action.type !== 'custom') return next(action)
+  //do stuff!
+}
+```
+
+**Applying it:**
+```
+import { createStore, applyMiddleware, } from 'redux'
+import reducer from './reducer'
+import customMiddleware from './customMiddleware'
+
+const store = createStore(
+  reducer,
+  applyMiddleware(customMiddleware)
+)
+```
+
+Whaaa? store => next => action => I know that looks confusing. Essentially you are building a chain of functions, it will look like this when it gets called:
+
+```
+let dispatched = null
+let next = actionAttempt => dispatched = actionAttempt 
+
+const dispatch = customMiddleware(store)(next)
+
+dispatch({
+  type: 'custom',
+  value: 'test'
+})
+```
+
+All you are doing is chaining function calls and passing in the neccesary data. When I first saw this I was confused a little due to the long chain, but it made perfect sense after reading the article on [writing redux tests](https://redux.js.org/recipes/writing-tests).
+
+So now that we understand how those chained functions work, let’s explain the first line of our middleware.
+
+```
+if(action.type !== 'custom') return next(action)
+
+```
+
+There should be some way to tell what actions should go through your middleware. In this example, we are saying if the action’s type is not custom call next, which will pass it to any other middleware and then to the reducer.
+
+**Doing Cool stuff**
+
+The official guide on [redux middleware](https://redux.js.org/advanced/middleware) covers a few examples on this, I’m going to try to explain it in a more simple way.
+
+Say we want an action like this:
+
+```
+dispatch({
+  type: 'ajax',
+  url: 'http://api.com',
+  method: 'POST',
+  body: state => ({
+    title: state.title
+    description: state.description
+  }),
+  cb: response => console.log('finished!', response)
+})
+```
+
+We want this to do a post request, and then call the cb function. It would look something like this:
+
+```
+import fetch from 'isomorphic-fetch'
+
+const ajaxMiddleware = store => next => action => {
+  if(action.type !== 'ajax') return next(action)
+  
+  fetch(action.url, {
+    method: action.method,
+    body: JSON.stringify(action.body(store.getState()))
+  })
+  .then(response => response.json())
+  .then(json => action.cb(json))
+}
+```
+
+It’s pretty simple really. You have access to every method redux offers in middleware. What if we wanted the cb function to have access to dispatching more actions? We could change that last line of the fetch function to this:
+
+```
+.then(json => action.cb(json, store.dispatch))
+```
+
+Now in the callback, we can do:
+
+```
+  cb: (response, dispatch) => dispatch(newAction(response))
+
+```
+
+As you can see, middleware is very easy to write in redux. You can pass store state back to actions, and so much more.
 
